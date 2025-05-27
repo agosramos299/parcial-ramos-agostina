@@ -13,8 +13,7 @@ def pedir_entero(mensaje: str, minimo: int = None, permitir_cero: bool = True) -
     entrada = input(mensaje)
 
     while entrada.isdigit() == False or (
-        (minimo is not None and int(entrada) < minimo) or
-        (permitir_cero == False and int(entrada) == 0)
+        permitir_cero == False and int(entrada) == 0
     ):
         print("Entrada inválida. Intente nuevamente.")
         entrada = input(mensaje)
